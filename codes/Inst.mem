@@ -1,0 +1,10 @@
+0x00000133 // add X2, Zero, Zero
+0x000001b3 // add X3, Zero, Zero
+0x02800213 // addi X4, Zero, 40
+0x0041d063 // For: bge X3, X4, End_Loop / End_Loop = PC + 24 
+0x0001a303 // lw t1, 0(X3)
+0x00615463 // bge X2, t1, End_IF / End_IF = PC +8
+0x00600133 // add X2, Zero, t1
+0x00418193 // End_IF: addi X3, X3, 4
+0xfedff0ef // Jal ra, For / For = PC - 20
+// End_Loop:
